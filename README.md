@@ -1,4 +1,4 @@
-# World's Dumbest Browser
+# World's Simplest Browser
 
 ##Learning Competencies
 
@@ -9,7 +9,7 @@
 
 ##Summary
 
-We're going to build the dumbest web browser in the world.  It will work like this:
+We're going to build the simplest web browser in the world.  It will work like this:
 
 ```text
 $ ruby browser.rb
