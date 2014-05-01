@@ -1,15 +1,15 @@
-# World's Dumbest Browser 
- 
-##Learning Competencies 
+# World's Dumbest Browser
+
+##Learning Competencies
+
 - Use Net::HTTP to download and read html pages
-- Use the Nokogiri gem to parse CSS elements 
+- Use the Nokogiri gem to parse CSS elements
 - Identify and implement classes based on real world requirements
 - Create well-defined classes with a single responsibility
 
+##Summary
 
-##Summary 
-
- We're going to build the dumbest web browser in the world.  It will work like this:
+We're going to build the dumbest web browser in the world.  It will work like this:
 
 ```text
 $ ruby browser.rb
@@ -27,20 +27,20 @@ We'll be using Ruby's built-in [Net::HTTP](http://ruby-doc.org/stdlib-1.9.3//lib
 
 We want you to start getting familiar with how the web works.  Everything your program does a browser has to do too.
 
-### Release 0: Basic Toy Browser 
+### Release 0: Basic Toy Browser
 
 #### Listing the Responsibilities
 
 Start by listing the core responsibilities of your app.  Some of these responsibilities include:
 
-* Displaying a prompt for the user
-* Parsing user input
-* Fetching a web page
-* Extracting the relevant information from the web page
-* Displaying the relevant information in a user-friendly way
-* *etc.*
+- Displaying a prompt for the user
+- Parsing user input
+- Fetching a web page
+- Extracting the relevant information from the web page
+- Displaying the relevant information in a user-friendly way
+- *etc.*
 
-There are more &mdash; make sure you list them out!  Next, group these responsibilities into "concerns".  Prompting a user for input and taking the appropriate action might be one concern, for example.  Fetching a URL and returning an easy-to-display data structure might be another.
+There are more&mdash;make sure you list them out!  Next, group these responsibilities into "concerns".  Prompting a user for input and taking the appropriate action might be one concern, for example.  Fetching a URL and returning an easy-to-display data structure might be another.
 
 #### Toy Code
 
@@ -52,11 +52,9 @@ What kind of objects do `Net::HTTP` methods return?  Should your program expose 
 
 **Hint:** No.  Wrap them up in objects that more directly express what your code *does* rather than how its implemented.
 
-
-
 ### Release 1: Object-Oriented Browser
 
-#### Create Custom Objects 
+#### Create Custom Objects
 
 Start with a `Page` class that works like this:
 
@@ -79,10 +77,10 @@ page.title
 See the original gist for where to put the "driver" code.  You should have a `Browser` class that acts as the "brain" rather than lots of code living outside of a class.
 
 ##Optimize Your Learning
-* Read up on [Separation of Concerns](http://en.wikipedia.org/wiki/Separation_of_concerns).  
-* What responsibilities does your program have to fulfill?  What classes do you need to fulfill those responsibilities?  
-* Where are the boundaries between the classes &mdash; how do they communicate with each other?
+- Read up on [Separation of Concerns](http://en.wikipedia.org/wiki/Separation_of_concerns).
+- What responsibilities does your program have to fulfill?  What classes do you need to fulfill those responsibilities?
+- Where are the boundaries between the classes &mdash; how do they communicate with each other?
 
 ##Resources
-* [Net::HTTP](http://ruby-doc.org/stdlib-1.9.3/libdoc/net/http/rdoc/Net/HTTP.html) 
-* [Net::HTTP cheatsheet](http://www.rubyinside.com/nethttp-cheat-sheet-2940.html)
+- [Net::HTTP](http://ruby-doc.org/stdlib-1.9.3/libdoc/net/http/rdoc/Net/HTTP.html)
+- [Net::HTTP cheatsheet](http://www.rubyinside.com/nethttp-cheat-sheet-2940.html)
