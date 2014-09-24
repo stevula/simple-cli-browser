@@ -1,7 +1,7 @@
 require 'net/http'
 require 'nokogiri'
 
-require_relative 'util'
+require_relative 'page'
 
 class Browser
   def run!
