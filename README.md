@@ -56,25 +56,18 @@ What kind of objects do `Net::HTTP` methods return?  Should your program expose 
 
 #### Create Custom Objects
 
-Start with a `Page` class that works like this:
+Start with a `Page` class that has the following requirements:
 
-```ruby
-page = Page.new('http://www.cnn.com/2013/02/06/travel/private-jets/index.html')
+- I can create my page by telling it what url I want to find.
+- I can call a method `fetch!` to retrieve the contents of the site at the url using an HTTP request
+- I can retrieve the url of the page via a method called url
+- I can retrieve all of the links on the page via a method `links` which returns an array of String objects.
+- I can retrieve the title of the page via a method `title`.
 
-# Actually makes the HTTP request
-page.fetch!
 
-# Returns the URL of the underlying page
-page.url
+See browser.rb for where to put the "driver" code.  You should have a `Browser` class that acts as the "brain" rather than lots of code living outside of a class.
 
-# Returns an Array of URLs (as Strings).
-page.links
-
-# Returns the page's title
-page.title
-```
-
-See the original gist for where to put the "driver" code.  You should have a `Browser` class that acts as the "brain" rather than lots of code living outside of a class.
+You should write tests for the Page object functionality in page_spec.rb
 
 ##Optimize Your Learning
 - Read up on [Separation of Concerns](http://en.wikipedia.org/wiki/Separation_of_concerns).

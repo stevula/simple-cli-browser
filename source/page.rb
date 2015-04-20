@@ -1,13 +1,13 @@
 class Page
   def initialize(url)
   end
-  
+
   def fetch!
   end
-  
+
   def title
   end
-  
+
   def links
     # Research alert!
     # How do you use Nokogiri to extract all the link URLs on a page?
