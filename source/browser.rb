@@ -4,16 +4,35 @@ require 'nokogiri'
 require_relative 'page'
 
 class Browser
+  def initialize
+    welcome
+    run!
+  end
+
   def run!
-    # Run the browser
-    # Display a prompt for a user
-    # Parse their input
-    # Display useful results by instantiating
-    #   a new Page and calling methods on it.
-    
-    # Questions:
-    #  1. How can a user quit the browser gracefully?
-    #  2. How can a user ask for help, i.e., how do they know what commands are available to them?
+    get_user_input
+    generate_page
+    display_page
+    run!
+  end
+
+  def welcome
+    puts "Starting a new session..."
+    sleep(2)
+  end
+
+  def get_user_input
+    puts "Enter web address:"
+    @url = gets.chomp
+  end
+
+  def generate_page
+    @page = Page.new(@url)
+  end
+
+  def display_page
+    Viewer.new(@page)
+    sleep(5)
   end
 end
 
